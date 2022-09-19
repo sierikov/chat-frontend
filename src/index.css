@@ -5,9 +5,14 @@ body {
 }
 
 body,
-html {
+html,
+#root {
   height: 100%;
+}
+
+body,
+html {
   background-color: #1a1a1a;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   color: #fff;
 }
