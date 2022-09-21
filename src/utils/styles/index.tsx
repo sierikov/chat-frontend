@@ -53,6 +53,7 @@ export const Button = styled.button`
   &:focus,
   &:hover {
     background-color: #4e33ff;
+    border-color: #4e33ff;
   }
 
   &:hover {
@@ -60,7 +61,7 @@ export const Button = styled.button`
   }
 
   &:focus {
-    border-color: #fff;
+    border-color: #4e33ff;
   }
 `;
 
@@ -70,4 +71,31 @@ export const Page = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #1a1a1a;
+`;
+
+export const AuthCallout = styled.div`
+  text-align: center;
+  margin: 30px;
+  color: #f3f3f3;
+
+  span {
+    margin: 6px;
+  }
+
+  a {
+    padding: 0 2px;
+    color: inherit;
+    transition: 250ms color ease;
+
+    &:hover,
+    &:focus {
+      color: #b9b9b9
+    }
+
+    &:focus {
+      text-decoration: none;
+      padding: 0 1px;
+      border: solid 1px #b9b9b9;
+    }
+  }
 `;

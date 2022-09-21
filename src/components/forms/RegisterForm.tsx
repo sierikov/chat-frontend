@@ -1,6 +1,7 @@
-import {Button, InputContainer, InputField, InputLabel} from "../../utils/styles";
+import {AuthCallout, Button, InputContainer, InputField, InputLabel} from "../../utils/styles";
 import styles from './index.module.scss'
 import {FormEvent} from "react";
+import { Link } from "react-router-dom";
 
 export const RegisterForm = () => {
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -26,5 +27,9 @@ export const RegisterForm = () => {
       <InputField type="password" id="password"/>
     </InputContainer>
     <Button>Create account </Button>
+    <AuthCallout>
+      <span>Already have an account?</span>
+      <Link to="/login">Login</Link>
+    </AuthCallout>
   </form>
 }
