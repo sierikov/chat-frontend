@@ -1,20 +1,31 @@
 import {AuthCallout, Button, InputContainer, InputField, InputLabel} from "../../utils/styles";
 import styles from './index.module.scss'
-import {FormEvent} from "react";
 import {Link} from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 export const LoginForm = () => {
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+
+  const {
+    register,
+    handleSubmit
+  } = useForm();
+
+  const onSubmit = (data: any) => {
+    console.log("Form submitted")
   };
-  return <form className={styles.form} onSubmit={onSubmit}>
+
+  return <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
     <InputContainer>
       <InputLabel htmlFor="email">Email</InputLabel>
-      <InputField type="email" id="email"/>
+      <InputField type="email" id="email"
+        {...register("email", {required: "Email is required"})}
+      />
     </InputContainer>
     <InputContainer className={styles.nameContainer}>
       <InputLabel htmlFor="password">Password</InputLabel>
-      <InputField type="password" id="password"/>
+      <InputField type="password" id="password"
+        {...register("password", {required: "Password is required"})}
+      />
     </InputContainer>
     <Button className={styles.button}>Login</Button>
     <AuthCallout>
