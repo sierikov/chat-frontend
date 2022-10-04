@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Сhat - frontend
 
 ## Available Scripts
 
@@ -41,6 +39,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Technologies
 
-- [Styled Components]
+- [Styled Components](https://styled-components.com/)
 - [React Router]
-- [React Hook Form]
+- [React Hook Form](https://react-hook-form.com/)

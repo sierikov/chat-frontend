@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { PageProps } from './styleTypes';
 
 export const InputField = styled.input`
   background-color: inherit;
@@ -65,12 +66,15 @@ export const Button = styled.button`
   }
 `;
 
-export const Page = styled.div`
+export const Page = styled.div<PageProps>`
   height: 100%;
+  background-color: #1a1a1a;
+`;
+
+export const PageCenter = styled(Page)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1a1a1a;
 `;
 
 export const AuthCallout = styled.div`
@@ -98,4 +102,19 @@ export const AuthCallout = styled.div`
       border: solid 1px #b9b9b9;
     }
   }
+`;
+
+
+export const ConversationsSidebarStyle = styled.aside`
+  height: 100%;
+  width: 350px;
+  background-color: #1f1f1f;
+  position: absolute;
+  left: 0;
+  top: 0;
+`;
+
+export const ConversationChannelPageStyle = styled.div`
+  height: 100%;
+  margin-left: 350px;
 `;

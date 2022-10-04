@@ -1,8 +1,8 @@
-import {Page} from "../utils/styles";
+import {PageCenter} from "../utils/styles";
 import {LoginForm} from "../components/forms/LoginForm";
 
 export const LoginPage = () => {
-  return <Page>
+  return <PageCenter>
     <LoginForm/>
-  </Page>
+  </PageCenter>
 }
