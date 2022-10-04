@@ -1,11 +1,12 @@
 import {Page} from "../utils/styles";
 import {ConversationsSidebar} from "../components/conversations/ConversationsSidebar";
-import {Outlet, useParams} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import conversations from "../__moks__/conversations";
 
 export const ConversationsPage = () => {
-  const {id} = useParams();
+  // const {id} = useParams();
   return <Page>
-    <ConversationsSidebar/>
+    <ConversationsSidebar conversations={conversations}/>
     <Outlet/>
   </Page>
 }
