@@ -1,8 +1,8 @@
 import {RegisterForm} from "../components/forms/RegisterForm";
-import {Page} from "../utils/styles";
+import {PageCenter} from "../utils/styles";
 
 export const RegisterPage = () => {
-  return <Page>
+  return <PageCenter>
     <RegisterForm/>
-  </Page>
+  </PageCenter>
 }
