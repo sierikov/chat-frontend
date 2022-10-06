@@ -141,9 +141,31 @@ export const ConversationChannelPageStyle = styled.div`
   overflow-y: none;
 `;
 
-export const ConversationSideBarContainer = styled.div`
+
+export const ContainerWithScrollbar = styled.div`
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    background: #151515;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #323232;
+    visibility: hidden;
+    border-radius: 10px;
+    transition: all 3s ease;
+  }
+
+  &:active::-webkit-scrollbar-thumb,
+  &:focus::-webkit-scrollbar-thumb,
+  &:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+`;
+
+export const ConversationSideBarContainer = styled(ContainerWithScrollbar)`
   max-height: calc(100% - 76px);
-  overflow-y: auto
 `;
 
 export const ConversationSideBarItem = styled.div`
